@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FineWine", "FineWine\FineWine.csproj", "{26DF23AA-A27F-4F85-8EB2-E91999D40D66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FineWine.Web.Tests", "FineWine.Web.Tests\FineWine.Web.Tests.csproj", "{987A9784-7126-4BC8-8EC1-141B912E3263}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{26DF23AA-A27F-4F85-8EB2-E91999D40D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26DF23AA-A27F-4F85-8EB2-E91999D40D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26DF23AA-A27F-4F85-8EB2-E91999D40D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987A9784-7126-4BC8-8EC1-141B912E3263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987A9784-7126-4BC8-8EC1-141B912E3263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987A9784-7126-4BC8-8EC1-141B912E3263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987A9784-7126-4BC8-8EC1-141B912E3263}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
