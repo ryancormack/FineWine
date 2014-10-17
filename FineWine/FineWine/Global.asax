@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="FineWine.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="FineWine.MvcApplication" Language="C#" %>
