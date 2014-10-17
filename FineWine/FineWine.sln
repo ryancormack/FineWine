@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FineWine", "FineWine\FineWi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FineWine.Web.Tests", "FineWine.Web.Tests\FineWine.Web.Tests.csproj", "{987A9784-7126-4BC8-8EC1-141B912E3263}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FineWine.Domain", "FineWine.Domain\FineWine.Domain.csproj", "{B22E0C6A-47C0-4222-89C6-826B915097BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{987A9784-7126-4BC8-8EC1-141B912E3263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{987A9784-7126-4BC8-8EC1-141B912E3263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{987A9784-7126-4BC8-8EC1-141B912E3263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22E0C6A-47C0-4222-89C6-826B915097BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22E0C6A-47C0-4222-89C6-826B915097BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22E0C6A-47C0-4222-89C6-826B915097BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22E0C6A-47C0-4222-89C6-826B915097BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
