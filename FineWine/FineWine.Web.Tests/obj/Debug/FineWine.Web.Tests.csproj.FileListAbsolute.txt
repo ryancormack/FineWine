@@ -30,3 +30,11 @@ C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\Castle.Core.xml
 C:\git\FineWine\FineWine\FineWine.Web.Tests\obj\Debug\FineWine.Web.Tests.csprojResolveAssemblyReference.cache
 C:\git\FineWine\FineWine\FineWine.Web.Tests\obj\Debug\FineWine.Web.Tests.dll
 C:\git\FineWine\FineWine\FineWine.Web.Tests\obj\Debug\FineWine.Web.Tests.pdb
+C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\FineWine.Domain.dll
+C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\MongoDB.Driver.dll
+C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\MongoDB.Bson.dll
+C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\FineWine.Domain.pdb
+C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\MongoDB.Driver.xml
+C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\MongoDB.Bson.xml
+C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\Rhino.Mocks.dll
+C:\git\FineWine\FineWine\FineWine.Web.Tests\bin\Debug\Rhino.Mocks.xml

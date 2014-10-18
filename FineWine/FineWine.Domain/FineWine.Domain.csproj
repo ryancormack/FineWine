@@ -48,11 +48,14 @@
     <Compile Include="Model\IWine.cs" />
     <Compile Include="Model\Wine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\IWineRepository.cs" />
     <Compile Include="Repositories\WineRepository.cs" />
+    <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\IWineService.cs" />
+    <Compile Include="Services\WineService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

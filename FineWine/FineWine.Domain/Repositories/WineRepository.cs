@@ -7,7 +7,7 @@ using MongoDB.Driver.Builders;
 
 namespace FineWine.Domain.Repositories
 {
-    public class WineRepository
+    public class WineRepository : IWineRepository
     {
         public MongoDatabase MongoDatabase;
         public MongoCollection WinesCollection;
@@ -24,9 +24,9 @@ namespace FineWine.Domain.Repositories
 
             try
             {
-                MongoDatabase.Server.Ping(); 
-       // Ping() method throws exception if not able to connect
- 
+                MongoDatabase.Server.Ping();
+                // Ping() method throws exception if not able to connect
+
             }
             catch (Exception ex)
             {
@@ -34,49 +34,28 @@ namespace FineWine.Domain.Repositories
             }
         }
 
-        private Wine[] _testWineData = new Wine[]
-        {
-            new Wine()
-            {
-                Id = Guid.NewGuid().ToString(),
-                Name = "Castillo San Lorenzo"
-            },
-            new Wine()
-            {
-                Id = Guid.NewGuid().ToString(),
-                Name = "Riojo"
-            }
-        };
-
         private List<Wine> _wineList = new List<Wine>();
+
+        public Wine GetLatestRioja()
+        {
+            var rioja = WinesCollection.FindOneAs<Wine>();
+            return rioja;
+        }
 
         public IEnumerable<Wine> GetAllWines()
         {
             if (ServerIsDown) return null;
- 
-            if (Convert.ToInt32(WinesCollection.Count()) > 0)
+
+            _wineList.Clear();
+            var wines = WinesCollection.FindAs(typeof(Wine), Query.NE("FirstName", "null"));
+            if (wines.Count() > 0)
             {
-                _wineList.Clear();
-                var employees = WinesCollection.FindAs(typeof (Wine), Query.NE("FirstName", "null"));
-                if (employees.Count() > 0)
+                foreach (Wine wine in wines)
                 {
-                    foreach (Wine employee in employees)
-                    {
-                        _wineList.Add(employee);
-                    }
+                    _wineList.Add(wine);
                 }
             }
-            else
-            {
-                WinesCollection.RemoveAll();
-                foreach (var employee in _testWineData)
-                {
-                    _wineList.Add(employee);
- 
-                    Add(employee); // add data to mongo db also
-                }
-            }
- 
+
             var result = _wineList.AsQueryable();
             return result;
         }

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<FineWine.Domain.Model.Wine>
+﻿@model FineWine.Features.Home.WineViewModel
+
 @{
     Layout = null;
 }
@@ -12,18 +13,7 @@
 </head>
 <body>
     <div>
-        yolo
-        @if (Model != null)
-        {
-            foreach (var wine in Model)
-            {
-                @wine.Name
-            }
-        }
-        else
-        {
-            <h3>Seems the Mongo server is not running! Please check and try again.</h3>
-        }
+        @Model.Wine.Name
     </div>
 </body>
 </html>

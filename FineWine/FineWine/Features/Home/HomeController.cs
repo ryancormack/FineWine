@@ -1,15 +1,22 @@
 ﻿using System.Web.Mvc;
-using FineWine.Domain.Repositories;
+using FineWine.Domain.Services;
 
 namespace FineWine.Features.Home
 {
     public class HomeController : Controller
     {
-        public WineRepository context = new WineRepository();
+        private readonly IWineService _wineService;
+
+        public HomeController(IWineService wineService)
+        {
+            _wineService = wineService;
+        }
+
 
         public ActionResult Index()
         {
-            return View("Index", context.GetAllWines());
+            var model = _wineService.GetLatestRioja();
+            return View("Index");
         }
     }
 }

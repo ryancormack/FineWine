@@ -46,6 +46,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -83,6 +86,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FineWine.Domain\FineWine.Domain.csproj">
+      <Project>{B22E0C6A-47C0-4222-89C6-826B915097BF}</Project>
+      <Name>FineWine.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FineWine\FineWine.csproj">
       <Project>{26DF23AA-A27F-4F85-8EB2-E91999D40D66}</Project>
       <Name>FineWine</Name>

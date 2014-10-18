@@ -1,7 +1,9 @@
 ﻿using System.Web.Mvc;
+using FineWine.Domain.Services;
 using FineWine.Features.Home;
 using FluentAssertions;
 using Machine.Specifications;
+using Rhino.Mocks;
 
 namespace FineWine.Web.Tests.ControllerTests
 {
@@ -21,11 +23,13 @@ namespace FineWine.Web.Tests.ControllerTests
 
             Establish context = () =>
             {
-                _controller = new HomeController();
+                _wineService = MockRepository.GenerateMock<IWineService>();
+                _controller = new HomeController(_wineService);
             };
 
             private static ActionResult _result;
             private static HomeController _controller;
+            private static IWineService _wineService;
         }
     }
 }
