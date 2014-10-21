@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using System;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace FineWine.Domain.Model
 {
@@ -8,5 +9,6 @@ namespace FineWine.Domain.Model
         string Id { get; set; }
 
         string Name { get; set; }
+        DateTime TimeAdded { get; set; }
     }
 }

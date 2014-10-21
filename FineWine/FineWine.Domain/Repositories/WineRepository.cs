@@ -4,6 +4,7 @@ using System.Linq;
 using FineWine.Domain.Model;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
+using MongoDB.Driver.Linq;
 
 namespace FineWine.Domain.Repositories
 {
@@ -38,7 +39,7 @@ namespace FineWine.Domain.Repositories
 
         public Wine GetLatestRioja()
         {
-            var rioja = WinesCollection.FindOneAs<Wine>();
+            var rioja = WinesCollection.AsQueryable<Wine>().Where(e => e.Name == "Riojo").First();
             return rioja;
         }
 
@@ -47,7 +48,7 @@ namespace FineWine.Domain.Repositories
             if (ServerIsDown) return null;
 
             _wineList.Clear();
-            var wines = WinesCollection.FindAs(typeof(Wine), Query.NE("FirstName", "null"));
+            var wines = WinesCollection.FindAs(typeof(Wine), Query.NE("Name", "null"));
             if (wines.Count() > 0)
             {
                 foreach (Wine wine in wines)
@@ -66,17 +67,13 @@ namespace FineWine.Domain.Repositories
             {
                 throw new ArgumentNullException("id", "Employee Id is empty!");
             }
-            var employee = (Wine)WinesCollection.FindOneAs(typeof(Wine), Query.EQ("_id", id));
-            return employee;
+            var wine = (Wine)WinesCollection.FindOneAs(typeof(Wine), Query.EQ("_id", id));
+            return wine;
         }
 
 
         public Wine Add(Wine wine)
         {
-            if (string.IsNullOrEmpty(wine.Id))
-            {
-                wine.Id = Guid.NewGuid().ToString();
-            }
             WinesCollection.Save(wine);
             return wine;
         }

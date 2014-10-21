@@ -16,7 +16,7 @@ namespace FineWine.Features.Home
         public ActionResult Index()
         {
             var model = _wineService.GetLatestRioja();
-            return View("Index");
+            return View("Index", model);
         }
     }
 }
