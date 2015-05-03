@@ -1,9 +1,0 @@
-C:\git\FineWine\FineWine\FineWine.Domain\bin\Debug\FineWine.Domain.dll
-C:\git\FineWine\FineWine\FineWine.Domain\bin\Debug\FineWine.Domain.pdb
-C:\git\FineWine\FineWine\FineWine.Domain\bin\Debug\MongoDB.Bson.dll
-C:\git\FineWine\FineWine\FineWine.Domain\bin\Debug\MongoDB.Driver.dll
-C:\git\FineWine\FineWine\FineWine.Domain\bin\Debug\MongoDB.Bson.xml
-C:\git\FineWine\FineWine\FineWine.Domain\bin\Debug\MongoDB.Driver.xml
-C:\git\FineWine\FineWine\FineWine.Domain\obj\Debug\FineWine.Domain.csprojResolveAssemblyReference.cache
-C:\git\FineWine\FineWine\FineWine.Domain\obj\Debug\FineWine.Domain.dll
-C:\git\FineWine\FineWine\FineWine.Domain\obj\Debug\FineWine.Domain.pdb
